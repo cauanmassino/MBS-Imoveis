@@ -1,0 +1,224 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px; /* Espaçamento interno */
+    height: 190px; /* Altura padrão para o cabeçalho */
+  }
+  
+  .logo img {
+    max-height: 100%; /* A logo não ultrapassa a altura do contêiner */
+    max-width: 100%; /* A logo é dimensionada para caber no contêiner */
+    object-fit: contain; /* Mantém a proporção da imagem */
+  }
+  
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #f7f7f7;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #102caa;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Adicionado para suporte a telas pequenas */
+  }
+  
+  header .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Adicionado para quebra em telas menores */
+    justify-content: center;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    background-color: #d4af37;
+    border-radius: 5px;
+  }
+  
+  /* Menu Secundário */
+.menu {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    gap: 17px; /* Espaçamento entre os botões */
+    background-color: #102caa;
+    padding: 18px 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Leve sombra */
+  }
+  
+  /* Certifique-se de que o menu ocupa a largura total do espaço disponível */
+  header {
+    width: 100%; /* Garante que o menu ocupe a largura total */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo do header */
+    padding: 0; /* Remove possíveis margens internas */
+    margin: 0; /* Remove margens externas */
+  }
+  
+  /* Botões do menu */
+  .menu li {
+    list-style: none;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #003f5c; /* Cor do texto */
+    background-color: white; /* Cor de fundo */
+    padding: 10px 20px; /* Tamanho do botão */
+    border: 0px solid #003f5c; /* Borda minimalista */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out; /* Suavidade na interação */
+  }
+  
+  .menu a:hover {
+    background-color: #003f5c; /* Cor de fundo ao passar o mouse */
+    color: white; /* Texto branco */
+    border-color: #d4af37; /* Alteração na cor da borda */
+  }
+    
+  
+  
+  /* Seção Hero */
+  /* Seção Hero */
+#hero {
+    text-align: center;
+    background: url('imagensHome/imgfundo.jpg') no-repeat center center; /* Caminho para sua imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    color: white;
+    padding: 60px 50px;
+  }
+  
+  
+  #hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #hero button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #d4af37;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #hero button:hover {
+    background-color: #ffa500;
+  }
+  
+  /* Grid de Empreendimentos */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Seção Contato */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    padding: 10px;
+    border: none;
+    background-color: #003f5c;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #d4af37;
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #003f5c;
+    color: white;
+  }
+  
+  /* Media Queries para telas menores */
+  @media (max-width: 480px) {
+    .menu {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    #hero {
+      padding: 40px 15px;
+    }
+  
+    .card {
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  
+    form input, form textarea {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    form button {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+    }
+  }
+  
+  
