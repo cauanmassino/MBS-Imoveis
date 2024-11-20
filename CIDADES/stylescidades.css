@@ -1,0 +1,142 @@
+/* Reset básico */
+body, h1, h2, h3, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f8faf8; /* Cinza claro para o fundo */
+}
+
+/* Estilo da imagem da logo */
+.logo-img {
+  height: 50px; /* Tamanho padrão da logo */
+  width: auto; /* Mantém proporções */
+  display: inline-block;
+}
+
+/* Centraliza verticalmente logo e menu */
+.navbar-brand,
+.navbar-toggler {
+  display: flex;
+  align-items: center;
+}
+
+/* Cor de fundo do menu */
+.navbar-dark-bg {
+  background-color: #003366; /* Azul escuro */
+}
+
+/* Estilo dos links no menu */
+.navbar-dark-bg .nav-link {
+  color: #ffffff; /* Cor branca para links */
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark-bg .nav-link:hover,
+.navbar-dark-bg .nav-link.active {
+  color: #cccccc; /* Cinza claro para hover e links ativos */
+}
+
+/* Ícone do botão responsivo (hambúrguer) */
+.navbar-toggler-icon {
+  background-color: transparent; /* Transparente para manter o estilo padrão do Bootstrap */
+}
+
+/* Header */
+header {
+  background: #e9ecef; /* Fundo cinza claro */
+  padding: 20px 0;
+  border-bottom: 2px solid #007bff;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+/* Estilo dos cartões */
+.card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover; /* Imagem ajustada ao tamanho do card */
+  border-bottom: 2px solid #007bff;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.card ul {
+  font-size: 0.9rem;
+}
+
+.card ul li {
+  margin-bottom: 5px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Container principal */
+main .row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+main .card {
+  margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-img-top {
+    height: 150px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}
