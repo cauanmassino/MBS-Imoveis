@@ -16,7 +16,7 @@ body {
 
 /* Estilo da imagem da logo */
 .logo-img {
-  height: 50px; /* Tamanho padrão da logo */
+  height: 120px; /* Tamanho padrão da logo */
   width: auto; /* Mantém proporções */
   display: inline-block;
 }

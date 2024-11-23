@@ -152,7 +152,8 @@ header {
 /* Seção Hero */
 #hero {
   text-align: center;
-  background: url('imagensHome/imgfundo.jpg') no-repeat center center;
+  background: url('../Resources/home/imgfundo.jpg') no-repeat center center;
+
   background-size: cover;
   color: white;
   padding: 60px 50px;
