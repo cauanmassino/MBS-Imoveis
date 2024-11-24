@@ -151,12 +151,26 @@ header {
 
 /* Seção Hero */
 #hero {
+  position: relative;
   text-align: center;
-  background: url('../Resources/home/imgfundo.jpg') no-repeat center center;
-
-  background-size: cover;
   color: white;
-  padding: 60px 50px;
+  padding: 150px 50px;
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
+}
+
+#hero .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cobrir todo o espaço */
+  z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+#hero h1, #hero button {
+  position: relative; /* Garante que o texto esteja acima da imagem */
+  z-index: 1;
 }
 
 #hero h1 {
@@ -179,29 +193,80 @@ header {
   background-color: #ffa500;
 }
 
+
 /* Estilo para o título Empreendimentos */
 h2 {
-  color: #003f5c; /* Azul escuro */
+  color: #022d7c !important; /* Azul escuro */
   text-align: center; /* Centraliza o texto */
   font-size: 2rem; /* Ajusta o tamanho da fonte (opcional) */
   margin-bottom: 20px; /* Espaçamento abaixo do título */
 }
 
 /* Grid de Empreendimentos */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  margin: 20px;
+.card {
+  height: 400px; /* Altura fixa para os cards */
 }
 
+/* Grid de Empreendimentos */ 
 .card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  height: 400px; /* Altura fixa para os cards */
 }
+
+/* Ajuste nos cards */
+.card-img-top {
+  height: 200px;
+  object-fit: cover; /* Assegura que a imagem cubra o espaço disponível */
+}
+
+.card-img:hover {
+  transform: scale(1.03); /* Efeito de leve aumento ao passar o mouse */
+}
+
+.carousel-item {
+  padding: 20px 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+/* Botões transparentes */
+
+/* Botão com fundo azul */
+.btn-transparent {
+  background-color: #007bff; /* Fundo azul */
+  color: white; /* Texto branco */
+  padding: 10px 20px; /* Espaçamento interno */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 1rem; /* Tamanho da fonte */
+  text-align: center; /* Centraliza o texto */
+  text-decoration: none; /* Remove o sublinhado */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+/* Efeito no hover (aumenta o botão no hover) */
+.btn-transparent:hover {
+  background-color: #0056b3; /* Azul escuro no hover */
+  color: white; /* Texto permanece branco */
+  transform: scale(1.05); /* Leve aumento no hover */
+}
+
+.carousel-item img {
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+}
+
+/* Controles de navegação */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
 
 /* Seção Sobre Nós */
 #sobre-nos {
