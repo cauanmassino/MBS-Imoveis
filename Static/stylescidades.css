@@ -33,22 +33,40 @@ body {
   background-color: #102caa; /* Azul escuro */
 }
 
-/* Estilo dos links no menu */
-.navbar-dark-bg .nav-link {
-  color: #ffffff; /* Cor branca para links */
-  font-size: 1rem;
-  transition: color 0.3s ease;
+/* Estilo do contêiner do menu */
+.navbar-dark-bg .navbar-nav {
+  flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha, se necessário */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  gap: 10px; /* Espaçamento uniforme entre os botões */
 }
 
+/* Estilo dos botões no menu */
+.navbar-dark-bg .nav-link {
+  color: #ffffff; /* Texto branco */
+  font-size: 1rem; /* Tamanho da fonte */
+  padding: 10px 20px; /* Tamanho do botão */
+  background-color: #0041c4; /* Fundo azul para o botão */
+  border-radius: 5px; /* Bordas arredondadas */
+  border: 2px solid transparent; /* Borda inicial invisível */
+  transition: all 0.3s ease-in-out; /* Transição suave para hover */
+  text-align: center; /* Centraliza o texto */
+}
+
+
+/* Estilo no hover dos botões */
 .navbar-dark-bg .nav-link:hover,
 .navbar-dark-bg .nav-link.active {
-  color: #cccccc; /* Cinza claro para hover e links ativos */
+  background-color: #0056b3; /* Azul mais escuro no hover */
+  color: #ffffff; /* Texto branco */
+  border: 2px solid #ffffff; /* Destaque com borda branca */
+  transform: scale(1.05); /* Leve aumento no tamanho */
 }
 
 /* Ícone do botão responsivo (hambúrguer) */
 .navbar-toggler-icon {
   background-color: transparent; /* Transparente para manter o estilo padrão do Bootstrap */
 }
+
 
 /* Header Principal */
 header {

@@ -68,7 +68,7 @@ header nav ul li a:hover {
   display: flex;
   flex-direction: column; /* Por padrão, os botões ficam em coluna */
   align-items: center;
-  gap: 10px; /* Espaçamento entre os botões */
+  gap: 20px; /* Espaçamento entre os botões */
   padding: 18px;
 }
 

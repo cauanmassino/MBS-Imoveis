@@ -1,0 +1,242 @@
+/* Reset básico */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8faf8; /* Cinza claro para o fundo */
+}
+
+/* Estilo da imagem da logo */
+.logo-img {
+    height: 120px; /* Tamanho padrão da logo */
+    width: auto; /* Mantém proporções */
+    display: inline-block;
+}
+
+/* Centraliza verticalmente logo e menu */
+.navbar-brand,
+.navbar-toggler {
+    display: flex;
+    align-items: center;
+}
+
+/* Cor de fundo do menu */
+.navbar-dark-bg {
+    background-color: #102caa; /* Azul escuro */
+}
+
+/* Estilo do contêiner do menu */
+.navbar-dark-bg .navbar-nav {
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha, se necessário */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 10px; /* Espaçamento uniforme entre os botões */
+}
+
+/* Estilo dos botões no menu */
+.navbar-dark-bg .nav-link {
+    color: #ffffff; /* Texto branco */
+    font-size: 1rem; /* Tamanho da fonte */
+    padding: 10px 20px; /* Tamanho do botão */
+    background-color: #0041c4; /* Fundo azul para o botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 2px solid transparent; /* Borda inicial invisível */
+    transition: all 0.3s ease-in-out; /* Transição suave para hover */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo no hover dos botões */
+.navbar-dark-bg .nav-link:hover,
+.navbar-dark-bg .nav-link.active {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+    color: #ffffff; /* Texto branco */
+    border: 2px solid #ffffff; /* Destaque com borda branca */
+    transform: scale(1.05); /* Leve aumento no tamanho */
+}
+
+/* Ícone do botão responsivo (hambúrguer) */
+.navbar-toggler-icon {
+    background-color: transparent; /* Transparente para manter o estilo padrão do Bootstrap */
+}
+
+/* Header Principal */
+header {
+    background-color: #001f3f; /* Azul escuro intenso */
+    color: white; /* Texto branco */
+    padding: 20px 30px; /* Espaçamento interno */
+    display: flex; /* Flexbox para alinhamento */
+    justify-content: space-between; /* Espaçamento entre logo e menu */
+    align-items: center; /* Centraliza verticalmente */
+    border-bottom: 5px solid #007bff; /* Linha inferior azul marcante */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Sombra forte */
+    position: relative; /* Permite posicionamento de elementos adicionais */
+    z-index: 10; /* Mantém o header no topo */
+}
+
+/* Linha decorativa abaixo do header */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #007bff, #00d2ff); /* Gradiente dinâmico */
+}
+
+/* Logo */
+header .logo img {
+    height: 60px; /* Tamanho robusto */
+    margin-right: 15px; /* Espaçamento entre imagem e texto */
+}
+
+/* Menu de Navegação */
+header nav ul {
+    display: flex; /* Itens lado a lado */
+    gap: 20px; /* Espaçamento entre links */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+header nav ul li {
+    list-style: none; /* Remove marcadores de lista */
+}
+
+header nav ul li a {
+    font-size: 1.2rem; /* Tamanho maior para destaque */
+    font-weight: bold; /* Negrito */
+    color: #ffffff; /* Texto branco */
+    padding: 10px 20px; /* Espaçamento interno nos links */
+    border-radius: 5px; /* Bordas suaves */
+    transition: all 0.3s ease-in-out; /* Suavidade no hover */
+}
+
+header nav ul li a:hover {
+    background-color: #007bff; /* Fundo azul vibrante */
+    color: #ffffff; /* Texto branco */
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.4); /* Sombra leve */
+    transform: translateY(-3px); /* Elevação no hover */
+}
+
+/* Responsividade do Menu */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Itens em coluna */
+        gap: 10px; /* Reduz espaço entre itens */
+    }
+
+    header .logo {
+        font-size: 2rem; /* Tamanho reduzido em telas menores */
+    }
+}
+
+/* Estilos gerais para conteúdo da página */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que o conteúdo quebre em várias linhas em dispositivos móveis */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto; /* Centraliza a página e dá espaço nas laterais */
+}
+
+.images {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Galeria de imagens pequenas (thumbnails) */
+.thumbnail-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.thumbnail-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Efeito de zoom */
+}
+
+.thumbnail-container img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
+}
+
+/* Informações do imóvel */
+.property-info {
+    flex: 1;
+}
+
+.property-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.property-info p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.property-info ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.property-info ul li {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.property-info button.contact-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.property-info button.contact-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Responsividade para o layout geral */
+    .container {
+        flex-direction: column;
+    }
+
+    .images {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .thumbnail-container {
+        flex-direction: column; /* Thumbnails em coluna para telas pequenas */
+    }
+
+    /* Estilo do botão de contato */
+    .property-info button.contact-button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
