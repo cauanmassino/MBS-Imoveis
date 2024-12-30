@@ -1,4 +1,4 @@
-let currentIndex = 0;
+let currentIndex = 0; 
 const images = document.querySelectorAll('.carousel-image');
 const totalImages = images.length;
 
@@ -15,5 +15,13 @@ function moveSlide(step) {
     document.querySelector('.carousel-slide').style.transform = `translateX(${newTransformValue}%)`;
 }
 
+// Atualiza a imagem principal ao clicar nas miniaturas
+function changeMainImage(imageSrc) {
+    document.getElementById('mainImage').src = imageSrc;
+}
 
-
+// Função para alterar a imagem principal ao clicar nas miniaturas
+function changeMainImage(imageSrc) {
+    document.getElementById('mainImage').src = imageSrc;
+  }
+  

@@ -90,6 +90,46 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada no hover */
 }
 
+/* Estilo para a lista de miniaturas */
+.thumbnail-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as miniaturas quebrem para a linha seguinte */
+    gap: 10px; /* Espaçamento entre as imagens */
+    justify-content: center; /* Centraliza as miniaturas */
+}
+
+/* Estilo das miniaturas */
+.thumbnail-list img {
+    width: 80px; /* Largura fixa para as miniaturas */
+    height: 80px; /* Altura fixa */
+    object-fit: cover; /* Faz com que a imagem ocupe o espaço sem distorção */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que a imagem é clicável */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave */
+}
+
+/* Efeito ao passar o mouse nas miniaturas */
+.thumbnail-list img:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente a imagem */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave no hover */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .thumbnail-list img {
+        width: 60px; /* Reduz a largura das miniaturas em telas pequenas */
+        height: 60px; /* Reduz a altura das miniaturas */
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnail-list img {
+        width: 50px; /* Largura e altura iguais para manter a imagem quadrada */
+        height: 50px; /* Altura ajustada para ser igual à largura */
+        object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
+    }
+}
+
 /* Informações do imóvel */
 .property-info {
     flex: 1;
@@ -104,35 +144,20 @@ body {
 }
 
 /* Título principal */
+.property-info h1 {
+    font-size: 2rem; /* Tamanho maior do título */
+    color: #002952; /* Cor para o título */
+    margin-bottom: 15px;
+}
+
 /* Estilo das informações */
-.property-info {
-    flex: 1; /* Define a largura da seção de informações */
-    max-width: 50%; /* Limita a largura para metade da tela */
-    font-family: 'Roboto', sans-serif; /* Fonte moderna */
-    color: #002952; /* Azul marinho para o texto */
-    background-color: #ffffff; /* Fundo claro */
-    border: 1px solid #e0e0e0; /* Borda sutil */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 20px; /* Espaçamento interno */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+.property-info ul {
+    margin: 10px 0; /* Margem superior e inferior */
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        align-items: center; /* Centraliza os itens */
-    }
-
-    .images, .property-info {
-        max-width: 100%; /* Ocupa toda a largura disponível */
-    }
-}
-
-/* Parágrafos */
-.property-info p {
-    font-size: 1.2rem; /* Tamanho da fonte */
-    margin: 10px 0; /* Espaçamento entre parágrafos */
+.property-info li {
+    font-size: 1.1rem; /* Tamanho da fonte */
+    margin: 5px 0; /* Margem entre os itens da lista */
 }
 
 /* Botão de contato */
@@ -153,10 +178,35 @@ body {
     background-color: #0056b3; /* Azul mais escuro no hover */
 }
 
-/* Responsividade */
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .images, .property-info {
+        max-width: 100%; /* Ocupa toda a largura disponível */
+        margin-bottom: 20px; /* Adiciona um espaçamento entre as seções */
+    }
+
+    .property-info h1 {
+        font-size: 1.8rem; /* Tamanho ajustado para telas menores */
+    }
+
+    .property-info p,
+    .property-info ul {
+        font-size: 1rem; /* Ajuste do tamanho da fonte */
+    }
+
+    .contact-button {
+        font-size: 0.9rem; /* Reduz o tamanho do botão em telas pequenas */
+        padding: 10px;
+    }
+
     .images img {
-        height: 300px; /* Altura reduzida para telas menores */
+        height: auto; /* Ajusta a altura automaticamente */
+        max-width: 100%; /* Garante que as imagens não ultrapassem a largura */
     }
 
     .carousel-item img {
@@ -165,6 +215,7 @@ body {
     }
 }
 
+/* Responsividade para smartphones (máx. 480px) */
 @media (max-width: 480px) {
     .images img {
         height: 250px; /* Altura menor em smartphones */
@@ -179,4 +230,61 @@ body {
         padding: 10px; /* Ajuste do botão */
         font-size: 0.9rem; /* Texto menor */
     }
+
+    /* Ajustando título e texto */
+    .property-info h1 {
+        font-size: 1.6rem; /* Menor tamanho de título */
+    }
+
+    .property-info p,
+    .property-info ul {
+        font-size: 0.9rem; /* Texto ainda menor */
+    }
 }
+
+
+/* Carrossel de Imagens */
+.carousel-container {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 80%;
+  }
+  
+  .carousel-inner img {
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .carousel-item {
+    height: 100vh;
+  }
+  
+  .carousel-item img {
+    height: 100%; 
+    object-fit: cover;
+  }
+  
+  /* Estilos para a lista de miniaturas */
+  .thumbnail-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre as miniaturas */
+    margin-top: 20px;
+    padding-bottom: 20px;
+    overflow-x: auto; /* Permite o scroll horizontal */
+  }
+  
+  .thumbnail-list img {
+    width: 80px; /* Tamanho das miniaturas */
+    height: 80px;
+    object-fit: cover; /* As imagens miniaturas não distorcem */
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+  }
+  
+  .thumbnail-list img:hover {
+    border: 2px solid #007bff; /* Realça a miniatura quando o mouse passa por cima */
+  }
+  
