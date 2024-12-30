@@ -14,3 +14,6 @@ function moveSlide(step) {
     const newTransformValue = -currentIndex * 100;
     document.querySelector('.carousel-slide').style.transform = `translateX(${newTransformValue}%)`;
 }
+
+
+

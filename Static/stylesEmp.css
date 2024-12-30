@@ -11,12 +11,13 @@ body, h1, h2, h3, p, ul, li, a {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f8faf8; /* Cinza claro para o fundo */
+    background-color: #ffffff; /* Fundo branco */
+    padding: 0; /* Sem espaçamento */
 }
 
 /* Estilo da imagem da logo */
 .logo-img {
-    height: 120px; /* Tamanho padrão da logo */
+    height: 100px; /* Tamanho padrão da logo */
     width: auto; /* Mantém proporções */
     display: inline-block;
 }
@@ -35,9 +36,9 @@ body {
 
 /* Estilo do contêiner do menu */
 .navbar-dark-bg .navbar-nav {
-    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha, se necessário */
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
     justify-content: center; /* Centraliza os botões horizontalmente */
-    gap: 10px; /* Espaçamento uniforme entre os botões */
+    gap: 20px; /* Espaçamento uniforme entre os botões */
 }
 
 /* Estilo dos botões no menu */
@@ -61,182 +62,121 @@ body {
     transform: scale(1.05); /* Leve aumento no tamanho */
 }
 
-/* Ícone do botão responsivo (hambúrguer) */
-.navbar-toggler-icon {
-    background-color: transparent; /* Transparente para manter o estilo padrão do Bootstrap */
-}
-
-/* Header Principal */
-header {
-    background-color: #001f3f; /* Azul escuro intenso */
-    color: white; /* Texto branco */
-    padding: 20px 30px; /* Espaçamento interno */
-    display: flex; /* Flexbox para alinhamento */
-    justify-content: space-between; /* Espaçamento entre logo e menu */
-    align-items: center; /* Centraliza verticalmente */
-    border-bottom: 5px solid #007bff; /* Linha inferior azul marcante */
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Sombra forte */
-    position: relative; /* Permite posicionamento de elementos adicionais */
-    z-index: 10; /* Mantém o header no topo */
-}
-
-/* Linha decorativa abaixo do header */
-header::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, #007bff, #00d2ff); /* Gradiente dinâmico */
-}
-
-/* Logo */
-header .logo img {
-    height: 60px; /* Tamanho robusto */
-    margin-right: 15px; /* Espaçamento entre imagem e texto */
-}
-
-/* Menu de Navegação */
-header nav ul {
-    display: flex; /* Itens lado a lado */
-    gap: 20px; /* Espaçamento entre links */
-    align-items: center; /* Centraliza verticalmente */
-}
-
-header nav ul li {
-    list-style: none; /* Remove marcadores de lista */
-}
-
-header nav ul li a {
-    font-size: 1.2rem; /* Tamanho maior para destaque */
-    font-weight: bold; /* Negrito */
-    color: #ffffff; /* Texto branco */
-    padding: 10px 20px; /* Espaçamento interno nos links */
-    border-radius: 5px; /* Bordas suaves */
-    transition: all 0.3s ease-in-out; /* Suavidade no hover */
-}
-
-header nav ul li a:hover {
-    background-color: #007bff; /* Fundo azul vibrante */
-    color: #ffffff; /* Texto branco */
-    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.4); /* Sombra leve */
-    transform: translateY(-3px); /* Elevação no hover */
-}
-
-/* Responsividade do Menu */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column; /* Itens em coluna */
-        gap: 10px; /* Reduz espaço entre itens */
-    }
-
-    header .logo {
-        font-size: 2rem; /* Tamanho reduzido em telas menores */
-    }
-}
-
-/* Estilos gerais para conteúdo da página */
+/* Estilo para o contêiner principal */
 .container {
     display: flex;
-    flex-wrap: wrap; /* Permite que o conteúdo quebre em várias linhas em dispositivos móveis */
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 20px auto; /* Centraliza a página e dá espaço nas laterais */
+    justify-content: space-between; /* Espaço entre os dois blocos */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    gap: 20px; /* Espaçamento entre imagens e informações */
+    max-width: 1200px; /* Largura máxima para o conteúdo */
+    margin: 0 auto; /* Centraliza o contêiner na página */
 }
 
+/* Estilo das imagens */
 .images {
-    flex: 1;
-    margin-right: 20px;
+    flex: 1; /* Define a largura das imagens */
+    max-width: 50%; /* Limita a largura para metade da tela */
 }
 
 .images img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: auto; /* Ajusta automaticamente a altura */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-/* Galeria de imagens pequenas (thumbnails) */
-.thumbnail-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-}
-
-.thumbnail-container img {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Efeito de zoom */
-}
-
-.thumbnail-container img:hover {
-    transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
+.carousel-item img:hover {
+    transform: scale(1.05); /* Leve aumento no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada no hover */
 }
 
 /* Informações do imóvel */
 .property-info {
     flex: 1;
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    color: #002952; /* Azul marinho para o texto */
+    background-color: #ffffff; /* Fundo claro */
+    border: 1px solid #e0e0e0; /* Borda sutil */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 20px; /* Espaçamento acima */
 }
 
-.property-info h1 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+/* Título principal */
+/* Estilo das informações */
+.property-info {
+    flex: 1; /* Define a largura da seção de informações */
+    max-width: 50%; /* Limita a largura para metade da tela */
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    color: #002952; /* Azul marinho para o texto */
+    background-color: #ffffff; /* Fundo claro */
+    border: 1px solid #e0e0e0; /* Borda sutil */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-.property-info p {
-    font-size: 1.1rem;
-    margin: 10px 0;
-}
-
-.property-info ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-.property-info ul li {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
-
-.property-info button.contact-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.property-info button.contact-button:hover {
-    background-color: #0056b3;
-}
-
-/* Responsividade para dispositivos móveis */
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
-    /* Responsividade para o layout geral */
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
     }
 
-    .images {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .thumbnail-container {
-        flex-direction: column; /* Thumbnails em coluna para telas pequenas */
-    }
-
-    /* Estilo do botão de contato */
-    .property-info button.contact-button {
-        width: 100%;
-        padding: 15px;
+    .images, .property-info {
+        max-width: 100%; /* Ocupa toda a largura disponível */
     }
 }
 
+/* Parágrafos */
+.property-info p {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    margin: 10px 0; /* Espaçamento entre parágrafos */
+}
+
+/* Botão de contato */
+.property-info .contact-button {
+    display: block;
+    width: 100%; /* Largura total em telas pequenas */
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #007bff; /* Azul vibrante */
+    color: white; /* Texto branco */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    transition: background-color 0.3s ease; /* Suavidade na interação */
+}
+
+.property-info .contact-button:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .images img {
+        height: 300px; /* Altura reduzida para telas menores */
+    }
+
+    .carousel-item img {
+        height: 150px; /* Altura reduzida para telas menores */
+        width: 150px; /* Largura ajustada */
+    }
+}
+
+@media (max-width: 480px) {
+    .images img {
+        height: 250px; /* Altura menor em smartphones */
+    }
+
+    .carousel-item img {
+        height: 120px; /* Altura reduzida ainda mais para smartphones */
+        width: 120px; /* Largura ajustada */
+    }
+
+    .property-info .contact-button {
+        padding: 10px; /* Ajuste do botão */
+        font-size: 0.9rem; /* Texto menor */
+    }
+}
