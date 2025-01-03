@@ -340,11 +340,100 @@ form button:hover {
 
 /* Rodapé */
 footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #003f5c;
-  color: white;
+  background-color: #0A1C2B;
+  color: #ffffff;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 }
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  flex: 1 1 150px;
+  margin-right: 20px;
+}
+
+.footer-logo img {
+  max-width: 40%;
+  height: auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #ffffff;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+
+.footer-bottom a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom a:hover {
+  color: #00aaff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-section {
+    flex: none;
+    margin-bottom: 20px;
+  }
+}
+
 
 /* Media Queries para telas menores */
 @media (max-width: 480px) {
@@ -372,3 +461,51 @@ footer {
     padding: 8px 12px;
   }
 }
+
+
+.social-media h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  color: #ffffff; /* Cor do texto */
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.social-link i {
+  margin-right: 8px; /* Espaço entre o ícone e o texto */
+  font-size: 20px; /* Tamanho do ícone */
+}
+
+.social-link:hover {
+  color: #007bff; /* Cor ao passar o mouse */
+}
+ 
+
+/*desenvolvido */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@400;700&display=swap');
+
+.developed-by {
+  font-family: 'Poppins', sans-serif; /* Fonte moderna */
+  font-size: 16px; /* Tamanho da fonte */
+  color: #555; /* Cor do texto */
+  text-align: center; /* Centralizar texto */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+.developed-by a {
+  text-decoration: none; /* Remover sublinhado */
+  color: #007bff; /* Cor do link */
+}
+
+.developed-by a:hover {
+  color: #0056b3; /* Cor ao passar o mouse */
+}
+
+
+
