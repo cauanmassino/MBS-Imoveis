@@ -150,15 +150,87 @@ body {
     margin-bottom: 15px;
 }
 
-/* Estilo das informações */
-.property-info ul {
-    margin: 10px 0; /* Margem superior e inferior */
+
+
+.property-info {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0;
 }
 
-.property-info li {
-    font-size: 1.1rem; /* Tamanho da fonte */
-    margin: 5px 0; /* Margem entre os itens da lista */
+.property-info h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
 }
+
+.property-info p {
+    margin: 5px 0;
+}
+
+.property-details {
+    display: flex;
+    gap: 10px; /* Espaço entre os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas pequenas */
+    overflow-x: auto; /* Rolagem horizontal se necessário */
+    width: 100%; /* Ocupa toda a largura */
+    box-sizing: border-box;
+}
+
+.property-details div {
+    white-space: nowrap; /* Evita quebra de linha em telas grandes */
+    flex-shrink: 0; /* Impede que os itens encolham se o espaço for insuficiente */
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* ícones */
+.property-details div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.property-details i {
+    font-size: 1.2em;
+    color: #0000007e; /* Cor dos ícones */
+}
+
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .property-details {
+        flex-wrap: wrap; /* Quebra itens em múltiplas linhas se necessário */
+        justify-content: space-between; /* Distribui itens de forma uniforme */
+    }
+
+    .property-details div {
+        white-space: normal; /* Permite quebra de linha em itens para evitar estouro em telas pequenas */
+        flex: 1 1 calc(50% - 10px); /* Ajusta a largura dos itens em 50% da tela menos o gap */
+    }
+
+    .property-info h2 {
+        font-size: 1.2em; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .contact-button {
+        width: 100%; /* Botão ocupa toda a largura disponível em telas pequenas */
+        text-align: center;
+    }
+}
+
+
+
+
+
+
 
 /* Botão de contato */
 .property-info .contact-button {
@@ -293,12 +365,173 @@ body {
     }
   }
 
-  /* Rodapé */
+/* Rodapé */
 footer {
+    background-color: #0A1C2B;
+    color: #ffffff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-logo {
+    flex: 1 1 150px;
+    margin-right: 20px;
+  }
+  
+  .footer-logo img {
+    max-width: 40%;
+    height: auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h3,
+  .footer-section h4 {
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
     text-align: center;
-    padding: 10px;
-    background-color: #003f5c;
-    color: white;
+    border-top: 1px solid #ffffff;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  
+  .footer-bottom p {
+    margin: 5px 0;
+  }
+  
+  .footer-bottom a {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
+  .footer-bottom a:hover {
+    color: #00aaff;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-logo {
+      margin-bottom: 20px;
+    }
+  
+    .footer-section {
+      flex: none;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  /* Media Queries para telas menores */
+  @media (max-width: 480px) {
+    .menu {
+      flex-direction: column;
+      gap: 17px;
+    }
+  
+    #hero {
+      padding: 40px 15px;
+    }
+  
+    .card {
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  
+    form input, form textarea {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    form button {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+    }
+  }
+  
+  
+  .social-media h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .social-link i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    font-size: 20px; /* Tamanho do ícone */
+  }
+  
+  .social-link:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+  }
+   
+  
+  /*desenvolvido */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@400;700&display=swap');
+  
+  .developed-by {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #555; /* Cor do texto */
+    text-align: center; /* Centralizar texto */
+    margin-top: 20px; /* Espaçamento superior */
+  }
+  
+  .developed-by a {
+    text-decoration: none; /* Remover sublinhado */
+    color: #007bff; /* Cor do link */
+  }
+  
+  .developed-by a:hover {
+    color: #0056b3; /* Cor ao passar o mouse */
   }
   
   /* Botão do WhatsApp */
