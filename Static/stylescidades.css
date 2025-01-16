@@ -149,9 +149,6 @@ header nav ul li a:hover {
 }
 
 
-
-
-
 /* Estilo dos cartões */
 .card {
   border: none;
@@ -166,7 +163,7 @@ header nav ul li a:hover {
 }
 
 .card-img-top {
-  height: 200px;
+  height: 240px;
   object-fit: cover; /* Imagem ajustada ao tamanho do card */
   border-bottom: 2px solid #007bff;
 }
