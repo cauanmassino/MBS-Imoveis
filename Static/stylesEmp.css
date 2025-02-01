@@ -17,7 +17,7 @@ body {
 
 /* Estilo da imagem da logo */
 .logo-img {
-    height: 100px; /* Tamanho padrão da logo */
+    height: 150px; /* Tamanho padrão da logo */
     width: auto; /* Mantém proporções */
     display: inline-block;
 }
@@ -38,7 +38,7 @@ body {
 .navbar-dark-bg .navbar-nav {
     flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
     justify-content: center; /* Centraliza os botões horizontalmente */
-    gap: 20px; /* Espaçamento uniforme entre os botões */
+    gap: 15px; /* Espaçamento uniforme entre os botões */
 }
 
 /* Estilo dos botões no menu */
@@ -61,6 +61,21 @@ body {
     border: 2px solid #ffffff; /* Destaque com borda branca */
     transform: scale(1.05); /* Leve aumento no tamanho */
 }
+
+/* Header Principal */
+header {
+  background-color: #136ac2; /* Azul escuro intenso */
+  color: white; /* Texto branco */
+  padding: 20px 30px; /* Espaçamento interno */
+  display: flex; /* Flexbox para alinhamento */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Sombra forte */
+  position: relative; /* Permite posicionamento de elementos adicionais */
+  z-index: 10; /* Mantém o header no topo */
+}
+
+
 
 /* Estilo para o contêiner principal */
 .container {
