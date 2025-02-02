@@ -16,7 +16,7 @@ body {
 
 /* Estilo da imagem da logo */
 .logo-img {
-  height: 120px; /* Tamanho padrão da logo */
+  height: 150px; /* Tamanho padrão da logo */
   width: auto; /* Mantém proporções */
   display: inline-block;
 }
@@ -67,18 +67,6 @@ body {
   background-color: transparent; /* Transparente para manter o estilo padrão do Bootstrap */
 }
 
-
-.frase_centralizado {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #f5f5f5;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 /* Header Principal */
 header {
   background-color: #136ac2; /* Azul escuro intenso */
@@ -87,7 +75,6 @@ header {
   display: flex; /* Flexbox para alinhamento */
   justify-content: space-between; /* Espaçamento entre logo e menu */
   align-items: center; /* Centraliza verticalmente */
- 
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Sombra forte */
   position: relative; /* Permite posicionamento de elementos adicionais */
   z-index: 10; /* Mantém o header no topo */

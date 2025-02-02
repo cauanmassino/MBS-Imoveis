@@ -76,6 +76,10 @@ header {
 }
 
 
+/* Ícone do botão responsivo (hambúrguer) */
+.navbar-toggler-icon {
+  background-color: transparent; /* Transparente para manter o estilo padrão do Bootstrap */
+}
 
 /* Estilo para o contêiner principal */
 .container {
@@ -83,7 +87,7 @@ header {
     justify-content: space-between; /* Espaço entre os dois blocos */
     align-items: flex-start; /* Alinha os itens ao topo */
     gap: 20px; /* Espaçamento entre imagens e informações */
-    max-width: 1200px; /* Largura máxima para o conteúdo */
+    max-width: 1000px; /* Largura máxima para o conteúdo */
     margin: 0 auto; /* Centraliza o contêiner na página */
 }
 
@@ -575,4 +579,51 @@ footer {
 /* Ícone do WhatsApp */
 .whatsapp-button i {
     font-size: 24px;
+}
+
+
+/* Estilo para o botão de controle "prev" do carrossel */
+.carousel-control-prev {
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  width: 40px; /* Largura do botão */
+  height: 40px; /* Altura do botão */
+  border-radius: 50%; /* Botão circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 10px; /* Posição à esquerda */
+  top: 50%; /* Centralizado verticalmente */
+  transform: translateY(-50%);
+  z-index: 10; /* Garante que o botão fique acima do carrossel */
+}
+
+/* Estilo para o ícone dentro do botão "prev" */
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  width: 20px; /* Largura do ícone */
+  height: 20px; /* Altura do ícone */
+}
+
+/* Estilo para o botão de controle "next" do carrossel */
+.carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  width: 40px; /* Largura do botão */
+  height: 40px; /* Altura do botão */
+  border-radius: 50%; /* Botão circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px; /* Posição à direita */
+  top: 50%; /* Centralizado verticalmente */
+  transform: translateY(-50%);
+  z-index: 10; /* Garante que o botão fique acima do carrossel */
+}
+
+/* Estilo para o ícone dentro do botão "next" */
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  width: 20px; /* Largura do ícone */
+  height: 20px; /* Altura do ícone */
 }
