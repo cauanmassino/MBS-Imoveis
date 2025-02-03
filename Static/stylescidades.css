@@ -161,7 +161,7 @@ header nav ul li a:hover {
 }
 
 .card-img-top {
-  height: 240px;
+  height: 350px;
   object-fit: cover; /* Imagem ajustada ao tamanho do card */
   border-bottom: 2px solid #007bff;
 }
@@ -214,7 +214,7 @@ main .card {
   }
 
   .card-img-top {
-    height: 150px;
+    height: 350px;
   }
 
   .card-title {
